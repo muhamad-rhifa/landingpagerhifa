@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Rhifa .A</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Warna untuk latar belakang profil
+        const colors = ["#000000", "#FFFFFF", "#0000FF"]; // Hitam, putih, biru
+        let colorIndex = 0;
+
+        // Fungsi untuk mengganti warna latar belakang profil setiap detik
+        function changeProfileBackgroundColor() {
+            const profileSection = document.querySelector('.profile-section');
+            profileSection.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        // Mulai mengganti warna ketika halaman selesai dimuat
+        window.onload = function() {
+            setInterval(changeProfileBackgroundColor, 1000);
+        };
+    </script>
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <h2>Muhamad Rhifa Alfidza</h2>
+        </div>
+        <nav class="nav-lis">
+            <ul class="nav-list">
+                <li><a href="">Beranda</a></li>
+                <li><a href="https://wa.me/6282219470118?">Kontak</a></li>
+                <li><a href="link.html">Profil</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profil Section -->
+    <section class="profile-section">
+        <h2>Profil Saya</h2>
+        <img src="img/p12.jpeg" alt="Foto Profil" class="profile-photo">
+        <p>Nama: Muhamad Rhifa Alfidza</p>
+        <p>Selamat Datang Di Landing Page Saya</p>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <h2>Shop</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="img/p7.jpg" alt="Produk 1">
+                <p>Produk 1</p>
+                <span class="price">Rp100,000</span>
+                <button class="buy-btn">Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="img/p2.jpg" alt="Produk 2">
+                <p>Produk 2</p>
+                <span class="price">Rp200,000</span>
+                <button class="buy-btn">Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="img/p3.jpg" alt="Produk 3">
+                <p>Produk 3</p>
+                <span class="price">Rp300,000</span>
+                <button class="buy-btn">Beli Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Toggle navigation menu
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
